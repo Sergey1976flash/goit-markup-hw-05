@@ -617,16 +617,61 @@ img {
   /*=====================================*\
   # Modal window
 \*=====================================*/
-.backdrop {
-  display: none;
-
+.backdrop 
+{
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  display: flex;
+ align-items: center;
+ justify-content: center;
+  /* z-index: 999; */
 
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   background-color: rgba(46,47, 66, 0.4);
+  transition: opacity 300ms ease-in, visibilty 300ms ease-in;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial ;
+}
+.backdrop.is-open {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none ;
+}
+
+.modal {
+  position: relative;
+width: 408px;
+min-height: 584px;
+padding: 24px;
+flex-shrink: 0;
+border-radius: 4px;
+background: var(--DAIRY, #FCFCFC);
+box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+}
+.modal-btn {
+  position: absolute;
+ top: 24px;
+ right: 24px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+min-width: 24px;
+height:24px;
+color: #E7E9FC;  
+}
+.model-btn-icon {
+ stroke: currentColor; 
+}
+.modal-caption {
+  color: var(--NAVY-BLUE, #2E2F42);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1,5;
+  letter-spacing: 0.02em;
 }
