@@ -534,24 +534,41 @@
        <svg class="form-icon" width="18" height="24"><use href="./images/icons.svg#icon-name"></use>
        </svg>
        </div>
-       <label class="form-label" for="user_name"> Phone</label>
+       <label class="form-label" for="phone"> Phone</label>
           <div class="form-field">
         <input class="form-input" type="text" id name="user_name"/>
        <svg class="form-icon" width="18" height="24"><use href="./images/icons.svg#icon-phone"></use>
        </svg>
        </div>
-       <label class="form-label" for="user_name"> Email</label>
+       <label class="form-label" for="email"> Email</label>
           <div class="form-field">
-        <input class="form-input" type="text" id name="user_name"/>
+        <input class="form-input" type="text" id name="email"/>
        <svg class="form-icon" width="18" height="24"><use href="./images/icons.svg#icon-email"></use>
        </svg>
        </div>
-       <label class="comment" for="comment"> Comment</label>
+
+       <label class="form-label" for="comment"> Comment</label>
+       <div class="form-field"> 
+        <textarea
+          class="form-input"
+          name="comment"
+          placeholder="Text input"
+          rows="5"
+        ></textarea>
+       </div>
+
+       
+       <label>
+         <input type="checkbox" name="user" value="confirm" checked />
+         I accept the terms and conditions of the Privacy Policy
+       </label> 
+      
+       <!-- <label class="form-label" for="comment"> Comment</label>
           <div class="form-field">
-        <input class="form-input" type="text" id name="comment"/>
+        <input class="form-input" type="text" id name="comment"/> -->
        <!-- <svg class="form-icon" width="18" height="24"><use href="./images/icons.svg#icon-email"></use>
        </svg> -->
-       </div>
+       
 
         <button class="btn-send" type="submit">Send</button>
 </form>  
