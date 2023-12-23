@@ -695,7 +695,8 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
   border: none
 }
 .modal-btn-icon {
- stroke: currentColor; 
+ stroke: currentColor;
+ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-caption {
   width: 360px;
@@ -758,8 +759,10 @@ outline: transparent;
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .form-input:focus {
-  border-color: #4D5AE5;
-  fill: #4D5AE5;
+  border-color: #4d5ae5;
+}
+.form-input:focus + .input-icon {
+  fill: #4d5ae5;
 }
 .form-icon {
   position: absolute;
@@ -769,10 +772,10 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: #404040;
 }
-.form-icon:hover,
+/* .form-icon:hover,
 .form-icon:focus {
   fill: #ffffff
-}
+} */
 .modal-icon {
   position: relative;
   margin-bottom: 8px;
